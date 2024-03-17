@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let personName = ["ramesh","suresh","ganesh","nayan"];
+		console.log(personName);
+		let searchName = prompt("Enter the name which you want to search ");
+		let replacedName = prompt("Enter the name which you want to replace");
+		personName.splice(personName.indexOf(searchName),1,replacedName);
+		console.log(personName);
+		console.log(replacedName);
+		personName.forEach((name)=>document.write(name+"<br>"))
+	</script>
+
+</body>
+</html>

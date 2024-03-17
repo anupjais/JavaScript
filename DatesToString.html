@@ -1,0 +1,54 @@
+<html>
+	
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- <h1>JavaScript Dates</h1> -->
+	<!-- <h2>The toString() Method</h2> -->
+
+	<!-- <p>Convert a date to a string:</p> -->
+	<!-- <p id="demo"></p> -->
+
+	<script>
+		// const d = new Date();
+		// let tm = document.getElementById("demo");
+		// document.getElementById("demo").innerHTML = d.toString();
+		// function callDate()
+		// {
+		// 	const d = new Date();
+		// 	// document.write(d);
+		// 	// tm.innerHTML=new Date();
+		// 	tm.innerHTML=d;
+		// }
+		// document.write(d);
+		// setInterval(callDate,1000);
+		// function displayTime(){
+		// 	// let tm = document.getElementById("tm");
+		// 	let time = new Date();
+		// 	let hr = (time.getHours())%12;
+		// 	let mn = time.getMinutes();
+		// 	let sc = time.getSeconds();
+
+		// 	tm.innerHTML=`${hr}:${mn}:${sc}`
+		// }
+		// setInterval(displayTime,1000)
+
+		let date = new Date().toJSON();
+		let day = date.getDate();
+		document.write(day+"<br>");
+		document.write(day.toString());
+		// console.log(date.toLocaleFormat);
+	</script>
+
+</body>
+</html>

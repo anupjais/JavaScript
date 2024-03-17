@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random 6 digit opt generator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let otp = (Math.round(Math.random()*9000000)).toString();
+		let fotp = (otp.length>6?otp.substr(0,otp.length-1):otp);
+		document.write(fotp);
+		console.log(fotp.length);
+
+		// document.write(Math.round(Math.random()*999999));
+		// let opt;
+		// while(Math.len(opt)<)
+		// for(let i=0; i<6; i++)
+		// {
+		// 	opt =opt+"(Math.round(Math.random()*9))";
+		// 	// document.write(opt);
+		// }
+
+		// document.write(+opt);
+	</script>
+
+</body>
+</html>

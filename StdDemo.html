@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let stdList = [
+				{
+					name:"Anup",
+					native:"Pune",
+					branch:"MCA"
+				}
+			];
+		// document.write(stdList[0].name);
+		stdList.forEach(student => {
+    		document.write(`My name is ${student.name} and I'm from ${student.native}, my branch is ${student.branch} and Year of passout ${student.yop}.` + "<br>");
+		});
+	</script>
+</body>
+</html>

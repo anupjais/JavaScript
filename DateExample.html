@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Today Date</title>
+	<style type="text/css">
+		#dt{
+/*			color: olive;*/
+			color: none;
+			-webkit-text-stroke: 2px orange;
+			font-family: sans-serif;
+			font-size: 150px;
+			text-align: center;
+			text-shadow: 0px 30px 15px black;
+			margin-top: 5%;
+		}
+		#tm{
+			color: blue;
+			-webkit-text-stroke: 2px orange;
+			font-family: sans-serif;
+			font-size: 100px;
+			text-align: center;
+			text-shadow: 0px 20px 15px black;
+			margin-top: 15%;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="tm">00:00:00</h1>
+	<h1 id="dt">00/00/0000</h1>
+	<script type="text/javascript">
+		let date = new Date();
+
+		function displayDate(){
+			let dt = document.getElementById("dt");
+			// let date = new Date();
+			let day = date.getDate();
+			let mon = date.getMonth()+1;
+			let yr = date.getFullYear();
+			let dname = date.getDay();
+			dt.innerHTML=`${dname} ${day}/${mon}/${yr}`;
+
+		}
+		// function displayTime(){
+		// 	let tm = document.getElementById("tm");
+		// 	let time = new Date();
+		// 	let hr = (time.getHours())%12;
+		// 	let mn = time.getMinutes();
+		// 	let sc = time.getSeconds();
+
+		// 	tm.innerHTML=`${hr}:${mn}:${sc}`
+		// }
+		// setInterval(displayTime,1000)
+		function displayTime(){
+			let date = new Date();
+			let time = document.getElementById("tm");
+			let hh = (date.getHours())%12;
+			let mn = date.getMinutes();
+			let sc = date.getSeconds();
+			// document.write()
+			
+			tm.innerHTML=`${hh}:${mn}:${sc}`
+			
+		}
+		setInterval(displayTime,1000);
+		setInterval(displayDate,1000);
+		// dt.innerHTML=`${day}/${mon}/${yr}`;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Box</title>
+	<link rel="stylesheet" type="text/css" href="TextBoxStyle.css">
+</head>
+<body>
+	<h1 class="heading" align="center">TEXT BOX</h1>
+	
+		<div class="container" align="center">
+			<form class="textareaForm">
+				<h3>Enter Text Below</h3>
+				<br>
+				<textarea id="text" rows="10" cols="70" autofocus></textarea>
+				<br><br>
+				<button type="button" onclick="tranformUpperCase()">UPPERCASE</button>
+				<button type="button" onclick="tranformLowerCase()">UPPERCASE</button>
+				<button type="button" onclick="changeColor()">COLOR</button>
+				<button type="button" onclick="underline()">UNDERLINE</button>
+				<button type="button" onclick="copyText()">COPY</button>
+				<button type="button" onclick="searchText()">Text Search</button>
+				
+				<h2>The text-area contains </h2>
+
+			</form>
+		</div>
+
+
+
+	<script type="text/javascript">
+		let text = document.getElementById("text");
+		let clr ;
+
+		function tranformUpperCase()
+		{
+			text.value = text.value.toUpperCase();
+		}
+		function tranformLowerCase()
+		{
+			text.value = text.value.toLowerCase();
+		}
+		function changeColor()
+		{
+			clr== prompt("Enter you favorit color");
+			text.style.color = clr;
+		}
+		function searchText(){
+			let srchText = prompt("Enter your text");
+			if(text.value.includes(srchText))
+			{
+				alert(`Search text ${srchText} is present.`);
+			}else{
+				alert(`Search text ${srchText} is not present.`);
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>

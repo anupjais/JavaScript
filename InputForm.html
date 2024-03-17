@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Input Form</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend align="center">Input your credentials</legend>
+			<label>Username : </label>
+			<input type="text" name="un" id="username">
+			<br><br>
+			<label>Password : </label>
+			<input type="text" name="pass" id="password">
+			<br><br>
+			<input type="button" onclick="fetchCred()" name="btn" value="SUBMIT">
+			<!-- <input type="button" onclick="fetchCred()" name="btn" value="SUBMIT" align="right"> -->
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+		function fetchCred() {
+			let un = document.getElementById("username").value;
+			let pass = document.getElementById("password").value;
+
+			console.log("un - "+un);
+			console.log("pass - "+pass);
+		}
+	</script>
+
+</body>
+</html>

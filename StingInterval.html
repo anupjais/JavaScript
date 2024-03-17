@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let name = "RAMESH";
+		let tm = 1000;
+
+		function printCharacter(chr)
+		{
+			// document.write(chr);
+			document.write(chr);
+		}
+
+		for(let i=0; i<name.length; i++)
+		{
+			let ch = name.charAt(i);
+			setTimeout(printCharacter, tm, ch);
+			tm+=1000;
+			// setTimeout(printCharacter, 1000);
+		}
+	</script>
+
+</body>
+</html>

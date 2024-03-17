@@ -1,0 +1,51 @@
+.mdiv{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+/*	background: bisque;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+.container{
+	width: 400px;
+	height: 600px;
+	background: blanchedalmond;
+	border-radius: 50px;
+	padding: 10px;
+}
+#op{
+	width: 100%;
+	height: 50px;
+	text-align: right;
+	font-size: 30px;
+	font-weight: bold;
+	background: snow;
+	color: black;
+	border-radius: 10px;
+	border: 2px solid green;
+}
+.num{
+	background: ghostwhite;
+	color: green;
+	border: none;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.opr{
+	background: grey;
+	color: black;
+	border: none;
+	height: 50px;
+	width: 60px;
+	margin: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 22px;
+}

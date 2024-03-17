@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let personName = ["aman","ganesh","ramesh","nayan"];
+		console.log(personName);
+		let searchName = prompt("Enter the name which you want to update ");
+		if(personName.includes(searchName))
+		{
+			let updatedName = prompt("Enter the new name ");
+			let indxName = personName.indexOf(searchName);
+			personName[indxName] = updatedName;
+		}else
+		{
+			alert("Name not found.");
+		}
+		console.log(personName);
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let studentList = [
+				{
+					name : "Anup",
+					native : "Bettiah",
+					branch : "CS",
+					yop : 2024
+				},
+				{
+					name : "Ramesh",
+					native : "Pune",
+					branch : "Civil",
+					yop : 2025
+				},
+				{
+					name : "Kunal",
+					native : "Mumbai",
+					branch : "Electrical",
+					yop : 2022
+				},
+				{
+					name : "Ritu",
+					native : "Nandedh",
+					branch : "MBA",
+					yop : 2023
+				}
+			];
+		// studentList.forEach((student)=>document.write(`My name is ${student.name} and I'm from ${student.native}, my branch is ${student.branch} and Year of passout ${student.yop}.`+"<br>"))
+		studentList.forEach(student => {
+    		document.write(`<h1>My name is <bold>${student.name}</bold> and I'm from ${student.native}, my branch is ${student.branch} and Year of passout <strong>${student.yop}</strong>.</h1>` + "<br>");
+		})
+	</script>
+
+</body>
+</html>
