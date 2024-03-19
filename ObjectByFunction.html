@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		function subjects(a,b,c){
+			this.subj1 = a;
+			this.subj2 = b;
+			this.subj3 = c;
+
+			console.log(this.subj1+" "+this.subj2+" "+this.subj3);
+		}
+
+		let obj = new subjects("SQL","Mannual","Java");
+		// console.log
+		document.write(obj.subj1+"<br>");
+		document.write(obj.subj2+"<br>");
+		document.write(obj.subj3+"<br>");
+		console.log(obj);
+	</script>
+
+</body>
+</html>

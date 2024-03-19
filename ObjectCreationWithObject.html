@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let person1 = {
+			name:"Anup Kumar",
+			native:"Pune, Maharashtra",
+			education:{
+				grad:"MCA",
+				yop:2024,
+				clg:"Trinity College of Engineerin"
+			},
+			subjects:["SQL","Web-Tech","Java","Web-Servises","Adv. Java"],
+			hobbies:["Travelling","Mind Game","Podcast","Listen Music","Playing Guitar"],
+			strength:["Communication Skill","Punctual"]
+		} 
+
+		let person=Object.create(person1);
+		person.name="Suresh";
+		document.write(`I'm ${person.name}.`+"<br>");
+		document.write(`${person.name} is know the technologies : `+"<br>");
+		person.subjects.forEach((subs,count)=>document.write(++count+". "+subs+"<br>"));
+		
+		document.write("<br>"+`Hello my name is "${person.name}" and my hobbies are ${person.hobbies.forEach((hbs)=>document.write(hbs+"<br>"))}`);
+			// document.write(<br>)
+
+		document.write("<br><br>");
+
+		document.write(`I'm ${person1.name}.`+"<br>");
+		document.write(`${person1.name} is know the technologies : `+"<br>");
+		person1.subjects.forEach((subs,count)=>document.write(++count+". "+subs+"<br>"));
+		
+		document.write("<br>"+`Hello my name is "${person1.name}" and my hobbies are ${person1.hobbies.forEach((hbs)=>document.write(hbs+"<br>"))}`);
+
+	</script>
+
+</body>
+</html>

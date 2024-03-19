@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<textarea rows="10" cols="30" id="txt1" onkeyup="findSpclSymb()" autofocus>
+		
+	</textarea>
+	<p id="txt"></p>
+	<br><br>
+	<!-- <h1></h1> -->
+	<script type="text/javascript">
+		let text = document.getElementById("txt1");
+		// let text = txt.value.trim()
+		let noOfSpclSymb = 0;
+		let txt2 = "My string with spaces"
+		let txt3 = "MyStringContainingNoSpecialChars";
+
+		var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+		
+		function findSpclSymb(){
+			if (format.test(text)){
+				// console.log(txt1.value);
+				document.write(format.test(txt1) + "<br/>");
+				// noOfSpclSymb++;
+				// txt.innerHTML=`Total symbolls ${noOfSpclSymb++}`;
+
+				// spclSybl.innerHTML = `Total Special = ${spcSymb}.`
+			}   
+		}
+		
+		// document.write(format.test(txt1) + "<br/>");
+		// document.write(format.test("txt2") + "<br/>");
+		// document.write(format.test("txt3"));
+	</script>
+
+</body>
+</html>

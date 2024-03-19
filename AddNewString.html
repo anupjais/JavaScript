@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let str = "JavaScript is easy."
+		document.write(str+"<br>");
+		// // str = str.slice((str.indexOf("easy")));
+		// str = str.endsWith("easy");
+		// // 
+		// document.write(`${str.endsWith()}`);
+		let arr = str.split(" ");
+		arr.splice(arr.indexOf("easy"),0,"very");
+		str = arr.join(" ");
+		document.write(str+"<br>");
+
+
+
+
+
+		let str = new String();
+		console.log(str);
+	</script>
+
+</body>
+</html>

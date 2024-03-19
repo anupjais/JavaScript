@@ -9,55 +9,140 @@
 <body>
 	<h1 class="heading" align="center">TEXT BOX</h1>
 	
-		<div class="container" align="center">
-			<form class="textareaForm">
-				<h3>Enter Text Below</h3>
-				<br>
-				<textarea id="text" rows="10" cols="70" autofocus></textarea>
-				<br><br>
-				<button type="button" onclick="tranformUpperCase()">UPPERCASE</button>
-				<button type="button" onclick="tranformLowerCase()">UPPERCASE</button>
-				<button type="button" onclick="changeColor()">COLOR</button>
-				<button type="button" onclick="underline()">UNDERLINE</button>
-				<button type="button" onclick="copyText()">COPY</button>
-				<button type="button" onclick="searchText()">Text Search</button>
-				
-				<h2>The text-area contains </h2>
+	<div class="container" align="center">
+		<form class="textareaForm">
+			<h3>Enter Text Below</h3>
+			<br>
+			<textarea id="text" rows="10" cols="70" onkeyup="updateTextInfo()" autofocus></textarea>
+			<br><br>
+			<button type="button" onclick="tranformUpperCase()">UPPERCASE</button>
+			<button type="button" onclick="tranformLowerCase()">LOWERCASE</button>
+			<!-- <button type="button" onclick="changeColor()"> -->
+				<form>
+					<!-- <select onclick="changeColor('red')"> -->
+					<select>
+						<option selected disabled>Change COLOR</option>
+						<!-- <option onclick="changeColor("Blue")">Blue</option> -->
+						<option onclick="changeColor('blue')">Blue</option>
+						<option style="background-color: ocean;">Ocean</option>
+						<option>Black</option>x
+						<option>Beige</option>
+						<option>Cyan</option>
+						<option>Green</option>
+						<option>Red</option>
+					</select>
+				</form>
+			<!-- </button> -->
+			<button type="button" onclick="underline()">UNDERLINE
+				<select>
+					<option>UNDERLINE</option>
+					<option>Overline</option>
+					<option>Line-through</option>
+					<option>Underline</option>
+					<!-- <option>underline</option> -->
+					<option>Underline overline</option>
+				</select>
+			</button>
+			<button type="button" onclick="copyText()">COPY</button>
+			<button type="button" onclick="searchText()">Text Search</button>
+			<br><br>
+			<h2 id="textInfo">The text-area contains 0 Words and 0 Characters</h2>
+			<h2 id="spclSyboll" >Total Special Characters = 0</h2>
 
-			</form>
-		</div>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="TextBoxScript.js"></script>
 
 
+<!-- 
+<script type="text/javascript">
+	let text = document.getElementById("text");
+	let textinfo = document.getElementById("textInfo");
+	let noOfSpclSybl = 0;
+	let clr="red" ;
+		// console.log(text.value);
+	
 
-	<script type="text/javascript">
-		let text = document.getElementById("text");
-		let clr ;
+	function tranformUpperCase()
+	{
+		console.log(text.value);
+		text.value = text.value.toUpperCase();
+	}
 
-		function tranformUpperCase()
+
+	function tranformLowerCase()
+	{
+		text.value = text.value.toLowerCase();
+	}
+
+
+	function changeColor(clr)
+	{
+		// clr = prompt("Enter you favorit color");
+		// clr="red";
+		clr=clr
+		text.style.color = clr;
+	}
+
+
+	function searchText(){
+		clr = "green";
+		let srchText = prompt("Enter your text");
+		if(text.value.includes(srchText))
 		{
-			text.value = text.value.toUpperCase();
+			// alert(`Search text <bold>"${srchText}"</bold> is present.`).style.fontcolor(clr);
+			alert(`Search text "${srchText}" is present.`).style.color("green");
+		}else{
+			clr = "red";
+			// let txtAlrt = `Search text ${srchText} is not present.`.style.color = "red";
+			alert(txtAlrt.fontcolor("clr"));
+			// alert(txtAlrt.fontcolor("red"));
 		}
-		function tranformLowerCase()
+	}
+
+
+	function updateTextInfo(){
+		let numOfWords = text.value.trim().split(" ").length;
+		if(numOfWords)
 		{
-			text.value = text.value.toLowerCase();
+			// console.log(numOfWords);
+			textinfo.innerHTML = `The text-area contains ${numOfWords} Words and ${text.value.length} Characters.`;
 		}
-		function changeColor()
-		{
-			clr== prompt("Enter you favorit color");
-			text.style.color = clr;
-		}
-		function searchText(){
-			let srchText = prompt("Enter your text");
-			if(text.value.includes(srchText))
-			{
-				alert(`Search text ${srchText} is present.`);
-			}else{
-				alert(`Search text ${srchText} is not present.`);
-			}
-		}
+	}
 
 
-	</script>
+	function spclSyboll(){
+		// const spcSymb = "/[^A-Za-z0-9]/";
+		var spcSymb = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
+		// console.log(spcSymb)
+		if (spcSymb.test(text)){
+			// console.log(spcSymb)
+			text.innerHTML = `Total Special Characters ${noOfSpclSybl++}.`
+		}
+
+		if (spcSymb.test(text)){
+			// console.log(txt1.value);
+			// document.write(format.test(txt1) + "<br/>");
+			spclSyboll.innerHTML=`My-with(some%text)`;
+			// spclSybl.innerHTML = `Total Special = ${spcSymb}.`
+		}
+			
+	}
+
+
+	function copyText(){
+		navigator.clipboard.writeText(text.value);
+	}
+
+
+	function underline(){
+		clr = "black";
+		// text.style.textDecoration =`underline 3px wavy ${clr}`;
+		text.style.textDecoration =`underline 3px dashed ${clr}`;
+	}
+	
+</script> -->
 </body>
 </html>
